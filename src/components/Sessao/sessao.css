@@ -1,0 +1,7 @@
+.sessao {
+    background: linear-gradient(180deg, rgba(2, 2, 120, 1) 30%, rgba(60, 67, 180, 0.88) 100%);
+    padding: 8vh 12vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

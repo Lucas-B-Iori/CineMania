@@ -1,0 +1,141 @@
+.header {
+    display: flex;
+    background: rgb(4, 4, 23);
+
+    color: #eed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 26px;
+    border-bottom: 2px solid #000;
+}
+
+.header__menu, .header__pesquisa-responsivo, .header__nav-responsivo, .pesquisa-responsivo {
+    display: none;
+}
+
+.header__nav {
+    display: flex;
+    gap: 14px;
+}
+
+.header__nav_item {
+    font-size: 18px;
+    color: #ccd;
+    text-decoration: none;
+}
+
+.header__nav_item:hover {
+    color: #fff;
+    font-weight: 600;
+}
+
+.header__logo_titulo {
+    padding-left: 28px;
+}
+
+.header__logo_titulo a{
+    color: #eed;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.header__logo_titulo span {
+    font-weight: 800;
+    font-size: 1.15em;
+}
+
+.header__pesquisa {
+    display: flex;
+    width: 300px;
+    justify-content: end;
+}
+
+.header__pesquisa_input {
+    padding: 8px;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    width: 250px;
+}
+
+.header__pesquisa_botao {
+    padding: 8px;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.header__pesquisa_input:focus {
+    border: none;
+}
+
+@media screen and (max-width: 840px) {
+    .header__menu, .header__pesquisa-responsivo, .pesquisa-responsivo {
+        display: block;
+    }
+
+    .header__nav, .header__pesquisa, .invisivel {
+        display: none;
+    }
+
+    .header__logo_titulo {
+        padding: 0;
+    }
+
+    .nav-responsivo {
+        display: block;
+    }
+
+    .header__pesquisa-responsivo button {
+        background-color: inherit;
+        border: none;
+        color: #fff;
+    }
+
+    .header__pesquisa-responsivo__icone {
+        background-color: inherit;
+    }
+
+    .header__nav-responsivo {
+        display: flex;
+        flex-direction: column;
+        background-color: #eee;
+        padding: 16px 0;
+        gap: 18px;
+        position: absolute;
+        left: 12px;
+    }
+
+    .header__nav_item {
+        color: #000;
+        font-size: 21px;
+        padding: 0 32px 8px 8px;
+        width: 100%;
+        border-bottom: 1px solid #000;
+        font-weight: 600;
+    }
+
+    .header__nav_item:last-of-type {
+        border-bottom: 0;
+    }
+
+    .header__nav_item:hover {
+        text-decoration: underline;
+    }
+
+    .header__pesquisa-responsivo__input {
+        width: 100vw;
+        margin: 0px auto;
+        padding: 16px;
+        background-color: #281f5f;
+    }
+
+    .header__pesquisa_input {
+        width: 85%;
+        height: 34px;
+    }
+
+    .header__pesquisa_botao {
+        width: 15%;
+        height: 34px;
+    }
+}
