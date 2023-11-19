@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 import API_key from '../api_key'
-import Header from '../components/Header';
 import Sessao from '../components/Sessao';
-import { Show } from '../types/showType';
+import { ShowType } from '../types/showType';
 
-export default function App() {
-	
-	const [ shows, setShows ] = useState<Show[]>([])
+export default function Home() {
+	const [ shows, setShows ] = useState<ShowType[]>([])
 
     useEffect(() => {
 		const options = {
@@ -25,7 +23,6 @@ export default function App() {
 
   return (
     <div>
-		<Header />
 		<Sessao shows={shows}/>
 	</div>
   )
