@@ -46,7 +46,7 @@
     
 }
 
-.tv__meta_industrias, .tv__meta_generos, .tv__meta_overview {
+.tv__meta_generos, .tv__meta_overview {
     margin-left: 15px;
 }
 
@@ -104,4 +104,28 @@
     padding: 15px;
     font-size: 22px;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 950px) {
+    .tv__images {
+        height: auto;
+    }
+
+    .tv__images_img {
+        display: none;
+    }
+
+    .tv {
+        flex-direction: column;
+    }
+
+    .tv__meta_header__titulo {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .tv__meta_temporadas__caixa {
+        flex-direction: column;
+    }
 }

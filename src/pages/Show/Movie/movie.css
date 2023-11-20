@@ -36,7 +36,7 @@
 
 .movie__meta_header__titulo {
     font-size: 78px;
-    margin-bottom: 25px;;
+    margin-bottom: 25px;
 }
 
 .movie__meta_header__link {
@@ -88,4 +88,28 @@
 
 .movie__meta_industrias-companie img {
     max-width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+    .movie__images {
+        height: auto;
+    }
+
+    .movie__images_img {
+        display: none;
+    }
+
+    .movie {
+        flex-direction: column;
+    }
+
+    .movie__meta_header__titulo {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .movie__meta_header__titulo {
+        font-size: 36px;
+    }
 }
