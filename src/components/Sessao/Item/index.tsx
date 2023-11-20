@@ -17,8 +17,8 @@ export default function Item({ titulo, nota, data, imagem, id }: ItemProps) {
         <div className='item__container'>
             <h2 className='item__container_titulo'>{titulo}</h2>
             <div className='item__container_meta'>
-                <span>Data: {data}</span>
-                <span>Nota: {nota}</span>
+                <span>Date: {data}</span>
+                <span>Rating: {nota}</span>
             </div>
         </div>
       </div>
