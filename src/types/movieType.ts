@@ -1,4 +1,6 @@
-export type ProducaoType = {
+import { tvType } from "./tvType"
+
+export interface MovieType extends tvType {
     adult: boolean,
     backdrop_path: string,
     budget: number,

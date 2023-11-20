@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import API_key from "../api_key"
-import { ShowType } from "../types/showType"
-import { ProducaoType } from "../types/producaoType"
+import API_key from "../../api_key"
+import { ShowType } from "../../types/showType"
+import { MovieType } from "../../types/movieType"
+import Movie from './Movie'
+import TV from './TV'
 
 interface ShowProps {
     type: 'all' | 'movie' | 'tv'
@@ -10,10 +12,10 @@ interface ShowProps {
 
 export default function Show({ type }: ShowProps) {
     const {id} = useParams()
-    let mediaType: string | undefined
+    let mediaType: string
 
     const [ shows, setShows ] = useState<ShowType[]>([])
-    const [ producao, setProducao ] = useState<ProducaoType>()
+    const [ producao, setProducao ] = useState<MovieType>()
 
     useEffect(() => {
 		const options = {
@@ -33,8 +35,11 @@ export default function Show({ type }: ShowProps) {
 
     if (type === 'all') {
         const showEncontrado = shows.find((show) => show.id === Number(id))
-        console.log(showEncontrado?.media_type)
-        mediaType = showEncontrado?.media_type
+        if (!showEncontrado) {
+            mediaType = 'movie'
+        } else {
+            mediaType = showEncontrado.media_type
+        }
     } else {
         mediaType = type
     }
@@ -57,7 +62,7 @@ export default function Show({ type }: ShowProps) {
 
     return (
         <div>
-            <img src={`https://image.tmdb.org/t/p/w500${producao?.backdrop_path}`} alt="" />
+            {mediaType === 'movie' ? <Movie movie={producao}/> : <TV tv={producao}/>}
         </div>
     )
 }

@@ -1,6 +1,6 @@
 .sessao {
     background: linear-gradient(180deg, rgba(9, 12, 40, 1) 0%, rgba(8, 17, 30, 1) 22%, rgba(23, 29, 53, 1) 46%, rgba(30, 18, 56, 1) 73%, rgba(60, 30, 60, 1) 100%);
-        padding: 8vh 12vw;
+    padding: 8vh 12vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
