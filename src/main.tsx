@@ -5,7 +5,6 @@ import App from './App'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import Home from './pages/Home.tsx'
 import Filmes from './pages/Filmes.tsx'
 import Series from './pages/Series.tsx'
 import Show from './pages/Show/Show.tsx'
@@ -19,10 +18,6 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
-      },
-      {
-        path: '/filmes',
         element: <Filmes />
       },
       {
@@ -31,10 +26,6 @@ const router = createBrowserRouter([
       },
       {
         path: '/show/:id',
-        element: <Show type='all' />
-      },
-      {
-        path: '/filmes/show/:id',
         element: <Show type='movie' />
       },
       {
